@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>User Sign-Up</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" type="text/css" href="form.css" />
+    </head>
+    <body>
+        <h1>User Sign-Up</h1>
+        <form>
+            <!-- The `name' attributes on the form elements send the data to the server. -->
+            <!-- Note: `size' is the visible size in number of characters. -->
+            <label for="first_name">First Name:</label>
+            <input name="first_name" id="first_name" type="text" size="30" maxlength="30" />
+            <br />
+            <label for="middle_initial">Middle Initial:</label>
+            <input name="middle_initial" id="middle_initial" type="text" size="2" maxlength="1" />
+            <br />
+            <label for="last_name">Last Name:</label>
+            <input name="last_name" id="last_name" type="text" size="30" maxlength="30" />
+            <br />
+            <label for="email">Email:</label>
+            <input name="email" id="email" type="email" size="30" maxlength="40" />
+            <br />
+            
+            <!-- Drop-Down Selection Menu -->
+            <label for="favorite_os">Favorite OS:</label>
+            <select name="favorite_os" id="favorite_os">
+                <option value="unknown" label=" "></option>
+                <option value="linux">Linux</option>
+                <option value="windows">Windows</option>
+                <option value="mac">macOS</option>
+            </select>
+            
+            <!-- Radio buttons with a question. -->
+            <p>Are you a computer nerd?</p>
+            
+            <!-- IMPORTANT: The `name' attribute for radio buttons MUST BE THE SAME! -->
+            <!-- HOWEVER: The `id' attributes should be DIFFERENT. Clear as mud? -->
+            <!-- Notice that the `label' elements are after the `input' element. -->
+            <input type="radio" name="nerd_question" id="nerd_yes" value="yes">
+            <label for="nerd_yes" class="nerd_question_label">Yes</label>
+            <input type="radio" name="nerd_question" id="nerd_no" value="no">
+            <label for="nerd_no" class="nerd_question_label">No</label>
+            <br />
+            
+            <!-- The `fieldset' adds the rectangular border around the check boxes. -->
+            <fieldset>
+                <!-- The `legend' creates title text for the rectangular border. -->
+                <legend>Favorite Energy Source</legend>
+                <p>
+                    <input type="checkbox" value="coffee" id="chk_coffee" name="chk_coffee" />
+                    <label for="chk_coffee">Coffee</label>
+                    <br />
+                    <input type="checkbox" value="soda" id="chk_soda" name="chk_soda" />
+                    <label for="chk_soda">Soda</label>
+                    <br />
+                    <input type="checkbox" value="energy_drinks" id="chk_energy_drinks" name="chk_energy_drinks" />
+                    <label for="chk_energy_drinks">Energy Drinks</label>
+                    <br />
+                    <input type="checkbox" value="sleep" id="chk_sleep" name="chk_sleep" />
+                    <label for="chk_sleep">Actual Sleep</label>
+                    <br />
+                </p>
+            </fieldset>
+            
+            <p>Tell us a little about yourself:</p>
+            <!-- The `textarea' element is similar to a text box, but with more lines. -->
+            <!-- Whitespace matters in the default text inside the textarea. -->
+            <textarea rows="4" cols="60" name="mini_bio">Favorite hobby? What TV or movies do you enjoy? Or say something else...</textarea>
+            <br />
+            
+            <!-- The `submit' and the `reset' buttons side-by-side. -->
+            <input type="submit" value="Submit" id="submit_button" /><input type="reset" />
+        </form>
+        
+        <script src="jquery-3.4.0.min.js"></script>
+    </body>
+</html>

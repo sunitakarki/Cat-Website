@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Application</title>
+        <link rel="stylesheet" type="text/css" href="cat.css" />
+    </head>
+    <h1 id= "box_model_example">  Cat Adoption Application </h1>
+   
+    
+    
+    
+        <header>
+            <div>
+                <ul class="nav">
+                    <li class="nav"><a href="cat2.html">Home</a></li>
+                    <li class="nav"><a href="news.html" >News</a></li>
+                    <li class="nav"><a href="contact.html" >Contact</a></li>
+                    <li class="nav"><a href="https://cat-bounce.com/" target="_blank">Bouncing Cats</a></li>
+                    <li class="nav" style="float:right"><a class="active" href="about.html" >About</a></li>
+                </ul>
+            </div>
+            
+        </header>
+    
+    
+    
+    <body> 
+        
+        <p>How Many Cats Do You want to Adopt?</p>
+
+            <input id="id1" type="number" min="1" max="3" required>
+            <button onclick="myFunction()">OK</button>
+            
+            <p>(NOTE: Cannot adopt more than 3 cats)</p>
+            
+            <p id="demo"></p>
+        
+        <label for="cat_choice">Choose age group:</label>
+            <input list="cat-choice" id="cat_choice" name="cat-choice"/>
+         
+            
+            <datalist id="cat-choice">
+                <option value="Kitten" >
+                <option value="Junior" >
+                <option value="Prime" >
+                <option value="Mature">
+            </datalist>
+
+            
+              
+
+                
+                
+                
+                
+            
+                    <fieldset>
+                      <legend>Select Color of Cat</legend>
+                  
+                      <input type="radio" id="orange" name="cat">
+                      <label for="orange">Orange</label><br/>
+                  
+                      <input type="radio" id="black" name="cat">
+                      <label for="black">Black</label><br/>
+                  
+                      <input type="radio" id="white" name="cat">
+                      <label for="white">White</label><br/>
+                      
+                      <input type="radio" id="stripe" name="cat">
+                      <label for="stripe">Stripe</label>
+                    </fieldset>
+                
+            
+            <label for="free_toy" > Select Free Toy: </label>
+
+
+                <select name="free_toy" id="free_toy"   >
+                    <option value="Cat Catcher Wand" >Cat Catcher Wand </option>
+                    <option value="Cat Nip Mice"> Cat Nip Mice </option>
+                    <option value="Cat Circuit">Cat Circuit </option>
+                </select>
+            
+            
+                <input type="submit" value="Submit" id="submit_button" ><input type="reset" id="reset_button"  /> 
+                
+                
+                <script src="jquery-3.4.0.min.js"></script>
+    <script src="script.js" > </script> 
+    
+    </body>
+      
+    
+</html>
